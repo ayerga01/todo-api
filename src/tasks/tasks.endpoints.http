@@ -7,7 +7,7 @@ POST http://localhost:3200/tasks
 Content-Type: application/json
 {
     "title": "task 2",
-    "date": "2021-01-01T12:00:00Z",
+    "date": "2021-01-01",
     "description": "description of task 2",
     "priority": "normal",
     "status": "todo"
