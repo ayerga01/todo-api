@@ -4,9 +4,10 @@ using todo_api_new.Enums;
 
 namespace todo_api_new.Models
 {
-    public class Task
+    public class TaskEntity
     {
-        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid id { get; set; }
 
         public string title { get; set; }
