@@ -1,4 +1,5 @@
-﻿using todo_api_new.Enums;
+﻿using Microsoft.OpenApi.Extensions;
+using todo_api_new.Enums;
 
 namespace todo_api_new.Models.DTOs
 {
@@ -9,10 +10,9 @@ namespace todo_api_new.Models.DTOs
 
         public string description { get; set; }
 
-        public DateTime date { get; set; }
+        public DateOnly date { get; set; }
 
-        public Priority priority { get; set; } = Priority.normal;
-
-        public Status status { get; set; } = Status.todo;
+        public string priority { get; set; } = Priority.normal.ToString();
+        public string status { get; set; } = Status.todo.ToString();
     }
 }

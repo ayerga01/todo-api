@@ -92,7 +92,7 @@ namespace todo_api_new.Controllers
                 description = taskDomain.description,
                 date = taskDomain.date,
                 priority = taskDomain.priority,
-                status = taskDomain.status
+                status = taskDomain.status      
             };
             return CreatedAtAction(nameof(GetTask), new {id = taskDto.id }, taskDto);
         }
@@ -108,7 +108,6 @@ namespace todo_api_new.Controllers
             }
 
             //map dto to domain
-            task.priority = taskUpdateRequest.priority;
             task.status = taskUpdateRequest.status;
 
             await dbContext.SaveChangesAsync();

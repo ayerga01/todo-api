@@ -4,11 +4,11 @@ namespace todo_api_new.Enums
 {
     public enum Priority
     {
-        //[EnumMember(Value = "high")]
+        [EnumMember(Value = "high")]
         high,
-        //[EnumMember(Value = "normal")]
+        [EnumMember(Value = "normal")]
         normal,
-        //[EnumMember(Value = "low")]
+        [EnumMember(Value = "low")]
         low,
     }
 }

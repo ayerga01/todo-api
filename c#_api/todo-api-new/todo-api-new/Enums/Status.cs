@@ -4,11 +4,11 @@ namespace todo_api_new.Enums
 {
     public enum Status
     {
-        //[EnumMember(Value = "todo")]
+        [EnumMember(Value = "todo")]
         todo,
-        //[EnumMember(Value = "inProgress")]
+        [EnumMember(Value = "inProgress")]
         inProgress,
-        //[EnumMember(Value = "completed")]
+        [EnumMember(Value = "completed")]
         completed
     }
 }

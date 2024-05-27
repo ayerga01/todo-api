@@ -14,10 +14,9 @@ namespace todo_api_new.Models
 
         public string description { get; set; }
 
-        public DateTime date {  get; set; }
+        public DateOnly date {  get; set; }
 
-        public Priority priority { get; set; } = Priority.normal;
-
-        public Status status { get; set; } = Status.todo;
+        public string priority { get; set; } = Priority.normal.ToString();
+        public string status { get; set; } = Status.todo.ToString();
     }
 }
