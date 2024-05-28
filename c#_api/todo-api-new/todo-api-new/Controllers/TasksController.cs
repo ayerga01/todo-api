@@ -97,11 +97,11 @@ namespace todo_api_new.Controllers
             return CreatedAtAction(nameof(GetTask), new {id = taskDto.id }, taskDto);
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTask(Guid id, [FromBody] TaskUpdateRequestDto taskUpdateRequest)
+        [HttpPut]
+        public async Task<IActionResult> UpdateTask([FromBody] TaskUpdateRequestDto taskUpdateRequest)
         {
             //get data from db - domain models
-            var task = await dbContext.Tasks.FindAsync(id);
+            var task = await dbContext.Tasks.FindAsync(taskUpdateRequest.id);
             if (task == null)
             {
                 return NotFound();
